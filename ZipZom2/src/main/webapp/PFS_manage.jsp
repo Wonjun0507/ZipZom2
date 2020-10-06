@@ -309,26 +309,26 @@
 			<div class="form-group clearfix">
 				<span>계약 유형</span>
                       <div class="icheck-primary d-inline">
-                        <input type="radio" id="radioPrimary1" name="r1" checked>
-                        <label for="radioPrimary1">
+                        <input type="checkbox" id="checkboxPrimary1" name="r1" checked>
+                        <label for="checkboxPrimary1">
                         <span>전체</span>
                         </label>
                       </div>
                       <div class="icheck-primary d-inline">
-                        <input type="radio" id="radioPrimary2" name="r2">
-                        <label for="radioPrimary2">
+                        <input type="checkbox" id="checkboxPrimary2" name="r2">
+                        <label for="checkboxPrimary2">
 						<span>매매</span>
                         </label>
                       </div>
                       <div class="icheck-primary d-inline">
-                        <input type="radio" id="radioPrimary3" name="r3">
-                        <label for="radioPrimary3">
+                        <input type="checkbox" id="checkboxPrimary3" name="r3">
+                        <label for="checkboxPrimary3">
                         <span>전세</span>
                         </label>
                       </div>
                       <div class="icheck-primary d-inline">
-                        <input type="radio" id="radioPrimary4" name="r4" >
-                        <label for="radioPrimary4">
+                        <input type="checkbox" id="checkboxPrimary4" name="r4" >
+                        <label for="checkboxPrimary4">
                         <span>월세</span>
                         </label>
                       </div>
