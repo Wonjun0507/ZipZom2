@@ -348,9 +348,23 @@
                     	<option>176-1 개포동상지리츠빌</option>
                     	<option>656 개포래미안포레스트</option>
 					</select>
+					
+					<select class="form-control select2bs4" style="width: 200px;">
+                    	<option value="none">호 수</option>
+                    	<option>101호</option>
+                    	<option>102호</option>
+                    	<option>103호</option>
+                    	<option>104호</option>
+                    	<option>201호</option>
+                    	<option>202호</option>
+                    	<option>203호</option>
+                    	<option>204호</option>
+					</select>
+					
 					<button type="button" class="btn btn-block btn-primary" data-toggle="modal" data-target="#modal-xl" style="width: 200px;">
                   	상세정보 등록
                 	</button>
+                	
                 	
                 	<!-- /.modal -->
 
@@ -668,7 +682,11 @@
           <!-- /.modal-content -->
           
         </div>
-        <div>
+        
+        <!-- /.modal-dialog -->
+      </div>
+      
+      <div>
         <span>지번주소
 			<input type="text" class="form-control" style="width: 500px;"disabled>
 		</span>
@@ -676,8 +694,6 @@
 			<input type="text" class="form-control" style="width: 500px;" disabled>
 		</span>
 		</div>
-        <!-- /.modal-dialog -->
-      </div>
       <!-- /.modal -->
       
 				</div>
