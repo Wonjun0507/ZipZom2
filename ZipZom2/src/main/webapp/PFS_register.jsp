@@ -391,19 +391,19 @@
          			<div class="form-group clearfix">
          			
                       <div class="icheck-primary d-inline">
-                        <input type="radio" id="radioPrimary1" name="r1" checked>
+                        <input type="radio" id="radioPrimary1" name="r1" value="매매" checked>
                         <label for="radioPrimary1">
                         	매매
                         </label>
                       </div>
                       <div class="icheck-primary d-inline">
-                        <input type="radio" id="radioPrimary2" name="r1">
+                        <input type="radio" id="radioPrimary2" value="전세" name="r1">
                         <label for="radioPrimary2">
                         	전세
                         </label>
                       </div>
                       <div class="icheck-primary d-inline">
-                        <input type="radio" id="radioPrimary3" name="r1" >
+                        <input type="radio" id="radioPrimary3" value="월세" name="r1" >
                         <label for="radioPrimary3">
                         	월세
                         </label>
@@ -418,22 +418,22 @@
               <li>금액 정보 : 
               	<div class="input-group mb-3">
               		<span>매매가</span>
-					<input type="text" class="form-control" >
+					<input type="text" name="budget1" id="budget1" class="form-control" >
 					<div class="input-group-append">
 					<span class="input-group-text">만원</span>
 					</div>
 					<span>보증금</span>
-					<input type="text" class="form-control" >
+					<input type="text" name="budget2" id="budget2"  class="form-control" >
 					<div class="input-group-append">
 					<span class="input-group-text">만원</span>
 					</div>
 					<span>월세금</span>
-					<input type="text" class="form-control" >
+					<input type="text" name="budget3" id="budget3" class="form-control" >
 					<div class="input-group-append">
 					<span class="input-group-text">만원</span>
 					</div>
 					<span>융자금</span>
-					<input type="text" class="form-control" >
+					<input type="text" name="loan" id="loan" class="form-control" >
 					<div class="input-group-append">
 					<span class="input-group-text">만원</span>
 					</div>
@@ -442,17 +442,17 @@
               <li>면적 정보 : 
               <div class="input-group mb-3">
               		<span>공급면적</span>
-					<input type="text" class="form-control" >
+					<input type="text" name="area1" id="area1" class="form-control" >
 					<div class="input-group-append">
 					<span class="input-group-text">평</span>
 					</div>
 					<span>전용면적</span>
-					<input type="text" class="form-control" >
+					<input type="text" name="area2" id="area2" class="form-control" >
 					<div class="input-group-append">
 					<span class="input-group-text">평</span>
 					</div>
 					<span>대지면적</span>
-					<input type="text" class="form-control" >
+					<input type="text" name="area3" id="area3" class="form-control" >
 					<div class="input-group-append">
 					<span class="input-group-text">평</span>
 					</div>
@@ -460,15 +460,6 @@
                 </div>
               </li>
               <li>입주 정보 : </li>
-              <!-- checkbox -->
-                    <div class="form-group clearfix">
-                      <div class="icheck-primary d-inline">
-                        <input type="checkbox" id="checkboxPrimary1">
-                        <label for="checkboxPrimary1">
-                        즉시입주
-                        </label>
-                      </div>
-                    </div>
 				<!-- Date range -->
                 <div class="form-group">
                   <div class="input-group">
@@ -477,19 +468,10 @@
                         <i class="far fa-calendar-alt"></i>
                       </span>
                     </div>
-                    <input type="text" class="form-control float-right" id="reservation1">
+                    <input type="text" name="moveSchedule" class="form-control float-right" id="reservation1">
                   </div>
                   <!-- /.input group -->
                 </div>
-				<!-- checkbox -->
-                    <div class="form-group clearfix">
-                      <div class="icheck-primary d-inline">
-                        <input type="checkbox" id="checkboxPrimary2">
-                        <label for="checkboxPrimary2">
-                        협의가능
-                        </label>
-                      </div>
-                    </div>
               <li>임대 만기 : </li>
               <!-- Date range -->
                 <div class="form-group">
@@ -499,7 +481,7 @@
                         <i class="far fa-calendar-alt"></i>
                       </span>
                     </div>
-                    <input type="text" class="form-control float-right" id="reservation2">
+                    <input type="text" name="endOfLease" class="form-control float-right" id="reservation2">
                   </div>
                   <!-- /.input group -->
                 </div>
@@ -507,7 +489,7 @@
 				<!-- select -->
 				<div class="form-group">
 					<label>방개수</label>
-						<select class="custom-select">
+						<select class="custom-select" name="room">
 						<option>1개</option>
 						<option>2개</option>
 						<option>3개</option>
@@ -521,7 +503,7 @@
 				<!-- select -->
 				<div class="form-group">
 					<label>욕실수</label>
-						<select class="custom-select">
+						<select class="custom-select" name="bathroom">
 						<option>1개</option>
 						<option>2개</option>
 						<option>3개 이상</option>
@@ -531,7 +513,7 @@
 				<!-- select -->
 				<div class="form-group">
 					<label>향</label>
-						<select class="custom-select">
+						<select class="custom-select" name="direction">
 						<option>북향</option>
 						<option>남향</option>
 						<option>서향</option>
@@ -546,7 +528,7 @@
 				<!-- select -->
 				<div class="form-group">
 					<label>난방방식</label>
-						<select class="custom-select">
+						<select class="custom-select" name="heating_system">
 						<option>도시가스</option>
 						<option>LPG</option>
 						<option>전기</option>
@@ -554,99 +536,95 @@
                         </select>
 				</div>
 				
-				<!-- select -->
+				<!--checkbox -->
 				<div class="form-group">
-					<label>냉방시설</label>
-						<select class="custom-select">
-						<option>1대</option>
-						<option>2대 이상</option>
-                        </select>
+					<div class="custom-control custom-checkbox">
+						<input class="custom-control-input" name="pfs_checkbox" type="checkbox" id="aircondition" value="aircondition">
+						<label for="aircondition" class="custom-control-label">냉방시설</label>
+					</div>
 				</div>
 				
 				<!-- select -->
 				<div class="form-group">
-					<label>주차유무</label>
-						<select class="custom-select">
-						<option>가능</option>
-						<option>불가능</option>
-                        </select>
+					<div class="custom-control custom-checkbox">
+						<input class="custom-control-input" name="pfs_checkbox" type="checkbox" id="parking" value="parking">
+						<label for="parking" class="custom-control-label">주차유무</label>
+					</div>
 				</div>
 				
 				<!-- select -->
 				<div class="form-group">
-					<label>승강기</label>
-						<select class="custom-select">
-						<option>있음</option>
-						<option>없음</option>
-                        </select>
+					<div class="custom-control custom-checkbox">
+						<input class="custom-control-input" name="pfs_checkbox" type="checkbox" id="elevator" value="elevator">
+						<label for="elevator" class="custom-control-label">승강기</label>
+					</div>
 				</div>
 				
 				<!-- text input -->
 				<div class="form-group">
 					<label>세대수</label>
-						<input type="text" class="form-control" style="width: 50px;">
+						<input type="text" name="number_of_household" id="number_of_household" class="form-control" style="width: 50px;">
 				</div>
 				
 				<!-- text input -->
 				<div class="form-group">
 					<label>층수</label>
-						<input type="text" class="form-control" style="width: 50px;">
+						<input type="text" name="floor" id="floor" class="form-control" style="width: 50px;">
 				</div>
 				
 				<!-- text input -->
 				<div class="form-group">
 					<label>총 층수</label>
-						<input type="text" class="form-control" style="width: 50px;">
+						<input type="text" name="floor_total" id="floor_total" class="form-control" style="width: 50px;">
 				</div>
 				
 				<!-- text input -->
 				<div class="form-group">
 					<label>건축 년도</label>
-						<input type="text" class="form-control" style="width: 50px;">
+						<input type="text" name="b_year" id="b_year" class="form-control" style="width: 50px;">
 				</div>
 				
 				<!-- textarea -->
 				<div class="form-group">
 					<label>메모</label>
-						<textarea class="form-control" rows="3" ></textarea>
+						<textarea name="context" class="form-control" rows="3" ></textarea>
 				</div>
 				
 				<!-- checkbox -->
 				<div class="form-group">
 					<div class="custom-control custom-checkbox">
+						<input class="custom-control-input" name="security_pfs" type="checkbox" id="customCheckbox1" value="security_guard">
 						<label for="customCheckbox1" class="custom-control-label">경비원</label>
-						<input class="custom-control-input" type="checkbox" id="customCheckbox1" value="option1">
 					</div>
 					<div class="custom-control custom-checkbox">
+						<input class="custom-control-input" name="security_pfs" type="checkbox" id="customCheckbox2" value="videophone">
 						<label for="customCheckbox2" class="custom-control-label">비디오폰</label>
-						<input class="custom-control-input" type="checkbox" id="customCheckbox2" value="option2">
 					</div>
 					<div class="custom-control custom-checkbox">
+						<input class="custom-control-input" name="security_pfs" type="checkbox" id="customCheckbox3" value="interphone">
 						<label for="customCheckbox3" class="custom-control-label">인터폰</label>
-						<input class="custom-control-input" type="checkbox" id="customCheckbox3" value="option3">
 					</div>
 					<div class="custom-control custom-checkbox">
+						<input class="custom-control-input" name="security_pfs" type="checkbox" id="customCheckbox4" value="card_key">
 						<label for="customCheckbox4" class="custom-control-label">카드키</label>
-						<input class="custom-control-input" type="checkbox" id="customCheckbox4" value="option4">
 					</div>
 					<div class="custom-control custom-checkbox">
+						<input class="custom-control-input" name="security_pfs" type="checkbox" id="customCheckbox5" value="cctv">
 						<label for="customCheckbox5" class="custom-control-label">CCTV</label>
-						<input class="custom-control-input" type="checkbox" id="customCheckbox5" value="option5">
 					</div>
 					<div class="custom-control custom-checkbox">
+						<input class="custom-control-input" name="security_pfs" type="checkbox" id="customCheckbox6" value="door_security">
 						<label for="customCheckbox6" class="custom-control-label">현관보안</label>
-						<input class="custom-control-input" type="checkbox" id="customCheckbox6" value="option6">
 					</div>
 					<div class="custom-control custom-checkbox">
+						<input class="custom-control-input" name="security_pfs" type="checkbox" id="customCheckbox7" value="window_guard">
 						<label for="customCheckbox7" class="custom-control-label">방범창</label>
-						<input class="custom-control-input" type="checkbox" id="customCheckbox7" value="option7">
 					</div>
 				</div>
 				
 				<!-- phone mask -->
                 <div class="form-group">
                   <label>임대인</label>
-
                   <div class="input-group">
                     <div class="input-group-prepend">
                     <!-- text input -->
@@ -661,7 +639,6 @@
                 <!-- phone mask -->
                 <div class="form-group">
                   <label>임차인</label>
-
                   <div class="input-group">
                     <div class="input-group-prepend">
 					<!-- text input -->
