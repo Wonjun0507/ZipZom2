@@ -339,7 +339,7 @@
                     	<option>세곡동</option>
 					</select>
 
-					<select class="form-control select2bs4" style="width: 300px;">
+					<select class="form-control select2bs4" style="width: 200px;">
                     	<option value="none">건물, 지번(검색가능)</option>
                     	<option>655-1 개포 현대아파트 200동</option>
                     	<option>655-2 개포2차현대아파트</option>
@@ -666,25 +666,23 @@
 
           </div>
           <!-- /.modal-content -->
+          
         </div>
+        <div>
+        <span>지번주소
+			<input type="text" class="form-control" style="width: 500px;"disabled>
+		</span>
+		<span>도로명주소
+			<input type="text" class="form-control" style="width: 500px;" disabled>
+		</span>
+		</div>
         <!-- /.modal-dialog -->
       </div>
       <!-- /.modal -->
       
 				</div>
-    	    </div>
-    	     <div class="card-footer">
-        	<p>지번주소
-        		<input type="text" class="form-control" style="width: 500px;"disabled>
-        	</p>
-        	<p>도로명주소
-        		<input type="text" class="form-control" style="width: 500px;" disabled>
-        	</p>
-        	
-        	
-        </div>
-
-	</div>
+    	    </div>	
+	
 	<!-- /.card -->
 
     </section>
