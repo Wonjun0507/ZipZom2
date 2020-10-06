@@ -93,8 +93,7 @@
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 사이트 소개
-                <!-- 공지사항이나 업데이트에 새로운 글이 등록되면 옆에 숫자뜸 -->
-                <span class="badge badge-info right">1</span>
+                
                 <i class="right fas fa-angle-left"></i>
               </p>
             </a>
@@ -107,6 +106,8 @@
               </li>
               <li class="nav-item">
                 <a href="./resources/index2.html" class="nav-link">
+                <!-- 공지사항이나 업데이트에 새로운 글이 등록되면 옆에 숫자뜸 -->
+                <span class="badge badge-info right">1</span>
                   <i class="far fa-circle nav-icon"></i>
                   <p>공지사항</p>
                 </a>
@@ -215,36 +216,6 @@
             </a>
           </li>
           
-          <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-table"></i>
-              <p>
-                세금 계산
-                <i class="fas fa-angle-left right"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="../tables/simple.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>양도세</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="../tables/data.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>종부세</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="../tables/jsgrid.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>중개수수료</p>
-                </a>
-              </li>
-            </ul>
-          </li>
- 
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
