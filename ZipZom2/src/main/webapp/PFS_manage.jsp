@@ -370,14 +370,18 @@
           <div class="col-12">
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title">매물 목록</h3>
+                <h3 class="card-title">매물 목록</h3> 
+                <button type="button" class="btn btn-block btn-primary" data-toggle="modal" data-target="#modal-xl" style="width: 200px; height: 30px; align-items:center; float:right;">
+                  	상세정보 등록
+                </button>
               </div>
+               
               <!-- /.card-header -->
               <div class="card-body">
                 <table id="example2" class="table table-bordered table-hover">
                   <thead>
                   <tr>
-					<th></th>
+					<th ></th>
                     <th>타입</th>
                     <th>거래 유형</th>
                     <th>매물</th>
@@ -526,7 +530,7 @@
   <!-- /.control-sidebar -->
 </div>
 <!-- ./wrapper -->
-
+<jsp:include page="./pfs_register_dialog.jsp"></jsp:include>
 <!-- jQuery -->
 <script src="./resources/plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
