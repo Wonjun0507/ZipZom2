@@ -337,7 +337,7 @@
                 	</button>
                 	
                 	
-                	<!-- /.modal -->
+		<!-- /.modal -->
 
       <div class="modal fade" id="modal-xl">
         <div class="modal-dialog modal-xl">
