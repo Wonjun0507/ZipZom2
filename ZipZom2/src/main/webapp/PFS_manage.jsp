@@ -22,6 +22,8 @@
   <link rel="stylesheet" href="./resources/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
   <!-- daterange picker -->
   <link rel="stylesheet" href="./resources/plugins/daterangepicker/daterangepicker.css">
+  <!-- datepicker -->
+  <link rel="stylesheet" href="./resources/plugins/datepicker/css/datepicker.css">
   <!-- iCheck for checkboxes and radio inputs -->
   <link rel="stylesheet" href="./resources/plugins/icheck-bootstrap/icheck-bootstrap.min.css?after">
   <!-- Bootstrap Color Picker -->
@@ -255,49 +257,55 @@
         <div class="card-body" >
         	<div class="form-group row">
         		<div>
-        		<button type="button" class="btn btn-block btn-outline-secondary" style="width: 200px;">전 체</button>
+        		<button type="button" class="btn btn-block btn-outline-secondary" data-toggle="button" aria-pressed="false" autocomplete="off" style="width: 200px;">전 체</button>
         		</div>
         		<div>
-				<button type="button" class="btn btn-block btn-outline-secondary" style="width: 200px;">아파트</button>
+				<button type="button" class="btn btn-block btn-outline-secondary" data-toggle="button" aria-pressed="false" autocomplete="off" style="width: 200px;">아파트</button>
 				</div>
         		<div>
-				<button type="button" class="btn btn-block btn-outline-secondary" style="width: 200px;" >오피스텔</button>
+				<button type="button" class="btn btn-block btn-outline-secondary" data-toggle="button" aria-pressed="false" autocomplete="off" style="width: 200px;" >오피스텔</button>
 				</div>
         		<div>
-				<button type="button" class="btn btn-block btn-outline-secondary" style="width: 200px;">다세대/빌라</button>
+				<button type="button" class="btn btn-block btn-outline-secondary" data-toggle="button" aria-pressed="false" autocomplete="off" style="width: 200px;">다세대/빌라</button>
 				</div>
         		<div>
-				<button type="button" class="btn btn-block btn-outline-secondary" style="width: 200px;">다가구/단독</button>
+				<button type="button" class="btn btn-block btn-outline-secondary" data-toggle="button" aria-pressed="false" autocomplete="off" style="width: 200px;">다가구/단독</button>
 				</div>
 			</div>
-			<div class="form-group row">
-				<input type="text" class="form-control" placeholder="동이나 번지를 입력하세요." style="width: 400px;" >
-				<button type="button" class="btn btn-block btn-primary" style="width: 200px;">
-				동 / 번지수 검색
+			
+			<!-- 검색 텍스트바 & 버튼 -->
+			<div class="form-group row" >
+				<input type="text" class="form-control" placeholder="동이나 번지를 입력하세요." style="width: 600px; margin-right: 30px; margin-top: 30px;" >
+				<button type="button" class="btn btn-block btn-primary" style="width: 200px; margin-right: 10px; margin-top: 30px">
+				검색하기
+				</button>
+				
+				<button type="button" class="btn btn-block btn-outline-primary" data-toggle="modal" data-target="#modal-xl" style="width: 200px; margin-top: 30px">
+				신규 등록
 				</button>
 			</div>
 			
 			<div class="form-group clearfix">
-				<span>계약 유형</span>
-                      <div class="icheck-primary d-inline">
+				<span style="margin-right: 30px; ">계약 유형</span>
+                      <div class="icheck-primary d-inline" style="margin-right: 20px; ">
                         <input type="checkbox" id="checkboxPrimary1" name="r1" checked>
                         <label for="checkboxPrimary1">
                         <span>전체</span>
                         </label>
                       </div>
-                      <div class="icheck-primary d-inline">
+                      <div class="icheck-primary d-inline" style="margin-right: 20px; ">
                         <input type="checkbox" id="checkboxPrimary2" name="r2">
                         <label for="checkboxPrimary2">
 						<span>매매</span>
                         </label>
                       </div>
-                      <div class="icheck-primary d-inline">
+                      <div class="icheck-primary d-inline" style="margin-right: 20px; ">
                         <input type="checkbox" id="checkboxPrimary3" name="r3">
                         <label for="checkboxPrimary3">
                         <span>전세</span>
                         </label>
                       </div>
-                      <div class="icheck-primary d-inline">
+                      <div class="icheck-primary d-inline" style="margin-right: 20px; ">
                         <input type="checkbox" id="checkboxPrimary4" name="r4" >
                         <label for="checkboxPrimary4">
                         <span>월세</span>
@@ -305,28 +313,17 @@
                       </div>
 			</div>
 			
-			<div class="form-group clearfix">
-				<div class="input-group mb-3">
-				<span>건축년도</span>
-				<input type="text" class="form-control" style="width: 100px">
-					<div class="input-group-append">
-					<span class="input-group-text">년</span>
-					</div>
-				
-				<span>매매가</span>
-				<input type="text" class="form-control" style="width: 100px">
-					<div class="input-group-append">
-					<span class="input-group-text">만원</span>
-					</div>
-				
-				<span>전용면적</span>
-                <input type="text" class="form-control" style="width: 100px">
-					<div class="input-group-append">
-					<span class="input-group-text">평</span>
-					</div>
-				</div>      
-			</div>
-                    
+			<div class="input-group mb-3">
+			<span style="margin-right: 10px; margin-top: 10px;">매매가</span>
+			<input type="text" class="form-control" style="width: 200px; margin-top: 5px;" >
+			<span class="input-group-text" style="margin-right: 30px; margin-top: 5px;" ">만원</span>
+			<span style="margin-right: 10px; margin-top: 10px;">건축년도</span>
+			<input type="text" class="form-control" style="width: 200px; margin-top: 5px;" >
+			<span class="input-group-text" style="margin-right: 30px; margin-top: 5px;" ">년</span>
+			<span style="margin-right: 10px; margin-top: 10px;">전용면적</span>
+			<input type="text" class="form-control" style="width: 200px; margin-top: 5px;" >
+			<span class="input-group-text" style="margin-right: 30px; margin-top: 5px;" ">m²</span>
+            </div>       
         </div>
     
       </div>
@@ -498,6 +495,9 @@
 </div>
 <!-- ./wrapper -->
 
+
+<!-- 다이얼로그창 인클루드 -->
+<jsp:include page="./pfs_register_dialog.jsp"></jsp:include>
 <!-- jQuery -->
 <script src="./resources/plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
@@ -513,6 +513,8 @@
 <script src="./resources/plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
 <!-- date-range-picker -->
 <script src="./resources/plugins/daterangepicker/daterangepicker.js"></script>
+<!-- date-picker -->
+<script src="./resources/plugins/datepicker/js/bootstrap-datepicker.js"></script>
 <!-- bootstrap color picker -->
 <script src="./resources/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js"></script>
 <!-- Tempusdominus Bootstrap 4 -->
