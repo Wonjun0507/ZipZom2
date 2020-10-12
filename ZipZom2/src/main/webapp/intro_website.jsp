@@ -85,7 +85,7 @@
 
 	<!-- sidebar include -->
     <jsp:include page = "./sidebar.jsp" flush = "false"/>
-    
+   
   </aside>
 
   <!-- Content Wrapper. Contains page content -->
@@ -95,12 +95,12 @@
 		<div class="container-fluid">
 			<div class="row mb-2">
 				<div class="col-sm-6">
-					<h1>고객 관리</h1>
+					<h1>사이트 소개</h1>
 				</div>
 				<div class="col-sm-6">
 					<ol class="breadcrumb float-sm-right">
 						<li class="breadcrumb-item"><a href="#">Home</a></li>
-						<li class="breadcrumb-item active">고객 관리</li>
+						<li class="breadcrumb-item active">사이트 소개</li>
 					</ol>
 				</div>
 			</div>
@@ -114,206 +114,20 @@
 		<div class="card">
       		<!-- 카드 제목 -->
         	<div class="card-header">
-				<h3 class="card-title">고객 정보</h3> 
+				<h3 class="card-title">사이트 소개</h3> 
 			</div>
 			<!-- 본문 내용 -->
-			<div class="card-body" >
-	        	<div class="form-group clearfix">
-					<div class="col">
-						<div>고객 상태
-							<select class="form-control select2bs4" style="width: 200px;">
-								<option value="none">선택</option>
-								<option>계약대기</option>
-								<option>계약진행</option>
-								<option>계약완료</option>
-								<option>방문예정</option>
-								<option>기타</option>
-							</select>
-						</div>
-						<br/>
-						
-						<span>고객 속성
-							<div class="icheck-primary d-inline">
-	                        	<input type="checkbox" id="checkboxPrimary1" name="r1" checked>
-	                        	<label for="checkboxPrimary1">
-	                        	<span>전체</span>
-	                        	</label>
-							</div>
-							<div class="icheck-primary d-inline">
-		                        <input type="checkbox" id="checkboxPrimary2" name="r2">
-	    	                    <label for="checkboxPrimary2">
-								<span>매도인</span>
-	            	            </label>
-							</div>
-							<div class="icheck-primary d-inline">
-	                        	<input type="checkbox" id="checkboxPrimary3" name="r3">
-		                        <label for="checkboxPrimary3">
-	                        	<span>매수인</span>
-	                        	</label>
-							</div>
-							<div class="icheck-primary d-inline">
-	                        	<input type="checkbox" id="checkboxPrimary4" name="r4" >
-	                        	<label for="checkboxPrimary4">
-		                        <span>임대인</span>
-	    	                    </label>
-							</div>
-							<div class="icheck-primary d-inline">
-		                        <input type="checkbox" id="checkboxPrimary5" name="r5" >
-		                        <label for="checkboxPrimary5">
-	                        	<span>임차인</span>
-	                        	</label>
-							</div>
-							<div class="icheck-primary d-inline">
-		                        <input type="checkbox" id="checkboxPrimary6" name="r6" >
-	    	                    <label for="checkboxPrimary6">
-	        	                <span>집주인</span>
-	            	            </label>
-							</div>
-							<div class="icheck-primary d-inline">
-		                        <input type="checkbox" id="checkboxPrimary7" name="r7" >
-	    	                    <label for="checkboxPrimary7">
-	        	                <span>일반상담</span>
-	            	            </label>
-							</div>
-						</span>
-						<br/>
-						
-						
-						<!-- 검색 텍스트바 & 버튼 -->
-						<div class="form-group row" >
-							<input type="text" class="form-control" placeholder="이름 또는 연락처를 입력하세요." style="width: 600px; margin-right: 30px; margin-top: 30px;" >
-							<button type="button" class="btn btn-block btn-primary" style="width: 200px; margin-right: 10px; margin-top: 30px">
-							검색하기
-							</button>
-							<!-- 신규등록 모달창 버튼 -->
-							<button type="button" class="btn btn-block btn-outline-primary" data-toggle="modal" data-target="#modal-xl" style="width: 200px; margin-top: 30px">
-							신규 등록
-							</button>
-						</div>
-					</div>      
-				</div>
+			<div>
+			
 			</div>
 			
-
-    <!-- 고객리스트 테이블 -->
-    <section class="content">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-12">
-            <div class="card">
-              <div class="card-header">
-				<h3 class="card-title">고객 목록</h3> 
-              </div>
-              <!-- /.card-header -->
-              <div class="card-body">
-                <table id="example2" class="table table-bordered table-hover">
-                  <thead>
-                  <tr>
-					<th></th>
-                    <th>이름</th>
-                    <th>연락처</th>
-                    <th>고객 타입</th>
-                    <th>진행 상태</th>
-                    <th>계약 타입</th>
-                    <th>방문일</th>
-                  </tr>
-                  </thead>
-                  <tbody>
-                  <tr>
-                  	<th>
-                  		<div class="custom-control custom-checkbox">
-						<input class="custom-control-input" type="checkbox" id="customCheckbox1" value="option1">
-						<label for="customCheckbox1" class="custom-control-label"></label>
-						</div>
-					</th>
-                    <th>정연규</th>
-                    <th>010-1234-1234</th>
-                    <th>매도인</th>
-                    <th>계약준비</th>
-                    <th>매매</th>
-                    <th>2020-10-05</th>
-                  </tr>
-                  <tr>
-					<th>
-                  		<div class="custom-control custom-checkbox">
-						<input class="custom-control-input" type="checkbox" id="customCheckbox2" value="option2">
-						<label for="customCheckbox2" class="custom-control-label"></label>
-						</div>
-					</th>
-                    <th>정연규</th>
-                    <th>010-1234-1234</th>
-                    <th>매도인</th>
-                    <th>계약준비</th>
-                    <th>매매</th>
-                    <th>2020-10-05</th>
-                  </tr>
-                  <tr>
-					<th>
-                  		<div class="custom-control custom-checkbox">
-						<input class="custom-control-input" type="checkbox" id="customCheckbox3" value="option3">
-						<label for="customCheckbox3" class="custom-control-label"></label>
-						</div>
-					</th>
-                    <th>정연규</th>
-                    <th>010-1234-1234</th>
-                    <th>매도인</th>
-                    <th>계약준비</th>
-                    <th>매매</th>
-                    <th>2020-10-05</th>
-                  </tr>
-                  <tr>
-					<th>
-                  		<div class="custom-control custom-checkbox">
-						<input class="custom-control-input" type="checkbox" id="customCheckbox4" value="option4">
-						<label for="customCheckbox4" class="custom-control-label"></label>
-						</div>
-					</th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                  </tr>
-                  <tr>
-					<th>
-                  		<div class="custom-control custom-checkbox">
-						<input class="custom-control-input" type="checkbox" id="customCheckbox5" value="option5">
-						<label for="customCheckbox5" class="custom-control-label"></label>
-						</div>
-					</th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                  </tr>                  
-                </table>
-                <div class="modal-footer justify-content-left">
-					<button type="button" class="btn btn-primary">선택 삭제</button>
-				</div> 
-              </div>
-              <!-- /.card-body -->
-            </div>
-            <!-- /.card -->
-
-            
-            <!-- /.card -->
-          </div>
-          <!-- /.col -->
-        </div>
-        <!-- /.row -->
-      </div>
-      <!-- /.container-fluid -->
-    </section>
-    
+		</div>
+	</section>
     <!-- /.content -->
   </div>
-  
   <!-- /.content-wrapper -->
-</section>
-  <!-- footer include -->
+
+<!-- footer include -->
 <jsp:include page = "./footer.jsp" flush = "false"/>
 
 
@@ -322,7 +136,6 @@
     <!-- Control sidebar content goes here -->
   </aside>
   <!-- /.control-sidebar -->
-</div>
 </div>
 <!-- ./wrapper -->
 
