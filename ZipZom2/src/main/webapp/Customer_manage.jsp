@@ -120,7 +120,8 @@
 			<div class="card-body" >
 	        	<div class="form-group clearfix">
 					<div class="col">
-						<div>고객 상태
+						<div class="form-group row">
+							<span style="font-family: 'Helvetica', sans-serif; font-weight: bold; margin-right: 10px; margin-top: 5px;">고객 상태</span>
 							<select class="form-control select2bs4" style="width: 200px;">
 								<option value="none">선택</option>
 								<option>계약대기</option>
@@ -132,7 +133,8 @@
 						</div>
 						<br/>
 						
-						<span>고객 속성
+						<div class="form-group row">
+						<span style="font-family: 'Helvetica', sans-serif; font-weight: bold; margin-right: 10px; margin-top: 5px;">고객 속성</span>
 							<div class="icheck-primary d-inline">
 	                        	<input type="checkbox" id="checkboxPrimary1" name="r1" checked>
 	                        	<label for="checkboxPrimary1">
@@ -175,7 +177,7 @@
 	        	                <span>일반상담</span>
 	            	            </label>
 							</div>
-						</span>
+						</div>
 						<br/>
 						
 						

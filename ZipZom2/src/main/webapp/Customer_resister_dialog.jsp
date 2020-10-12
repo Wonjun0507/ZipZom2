@@ -27,14 +27,14 @@
 			</div>
 			<!-- modal 바디 -->
 			<!-- 폰트 테스트로 넣어봤음 / 나중에 바꿀 거나 css로 옮길것 -->
-			<div class="modal-body" style="font-family: 'Helvetica', sans-serif; color: #085ee4; font-weight: bold;">
+			<div class="modal-body" style="font-family: 'Helvetica', sans-serif; color: #0553DD; font-weight: bold;">
 				<ul>
 					<li>
 						<div class="form-group row">
 							<section>
 								<div class="input-group mb-3">
 								<!-- 고객 이름 -->
-	              				<span style="margin-right: 10px; margin-top: 5px;">고객 이름</span>
+	              				<span style="margin-right: 10px; margin-top: 10px;">고객 이름</span>
 								<input type="text" class="form-control" id="name" name="name" style="width: 200px; margin-right: 30px; margin-top: 5px;" >
 								</div>
 							</section>

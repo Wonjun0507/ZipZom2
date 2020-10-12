@@ -9,6 +9,7 @@
 <!-- <link rel="stylesheet" href="/resources/demos/style.css"> -->
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<!-- 도로명주소 api -->
 <script language="javascript">
 // opener관련 오류가 발생하는 경우 아래 주석을 해지하고, 사용자의 도메인정보를 입력합니다. ("팝업API 호출 소스"도 동일하게 적용시켜야 합니다.)
 //document.domain = "abc.go.kr";
@@ -30,6 +31,7 @@ function jusoCallBack(roadFullAddr,roadAddrPart1,addrDetail,roadAddrPart2,engAdd
 	document.form.zipNo.value = zipNo;
 }
 </script>
+<!-- 도로명주소 api 끝-->
 
 </head>
 <body>
@@ -45,30 +47,34 @@ function jusoCallBack(roadFullAddr,roadAddrPart1,addrDetail,roadAddrPart2,engAdd
 			<form name="form" id="form" method="post" style="margin-right: 10px; margin-top: 10px; margin-bottom: 10px;">
 	<table >
 			<colgroup>
-				<col style="width:30%"><col>
+				<col style="width:25%"><col>
 			</colgroup>
 			<tbody>
 				<tr>
 					<th>우편번호</th>
 					<td>
+						<div class="form-group row">
 					    <input type="hidden" id="confmKey" name="confmKey" value=""  >
-						<input class="form-control" type="text" id="zipNo" name="zipNo" readonly style="width:200px">
-					</td>
-					<td>
-						<input class="form-control" type="button"  value="주소검색" onclick="goPopup();">
+						<input class="form-control" type="text" id="zipNo" name="zipNo" readonly style="width:100px; margin-right: 10px;">
+						<input class="form-control" type="button"  value="주소검색" style="width:100px" onclick="goPopup();">
+						</div>
 					</td>
 				</tr>
 				<tr>
-					<th>지번주소</th>
-					<td><input class="form-control" type="text" id="roadAddrPart1" style="width:200%" readonly></td>
+					<th>도로명주소</th>
+					<td>
+						<div class="form-group row">
+						<input class="form-control" type="text" id="roadAddrPart1" style="width:300px; " readonly>
+						</div>
+					</td>
 				</tr>
 				<tr>
 					<th>상세주소</th>
 					<td>
-						<input class="form-control" type="text" id="addrDetail" style="width:100%" value="">
-					</td>
-					<td>
-						<input class="form-control" type="text" id="roadAddrPart2"  style="width:100%" value="" readonly>
+						<div class="form-group row">
+						<input class="form-control" type="text" id="addrDetail" style="width:40%; margin-right: 10px;" value="">
+						<input class="form-control" type="text" id="roadAddrPart2"  style="width:40% " value="" readonly>
+						</div>
 					</td>
 				</tr>
 			</tbody>
@@ -78,8 +84,9 @@ function jusoCallBack(roadFullAddr,roadAddrPart1,addrDetail,roadAddrPart2,engAdd
 	</div>
 							
 	<!-- 계약 유형 -->
-	<div class="form-group row" >
-		<li style="margin-right: 20px; margin-left: 7.5px; margin-top: 5px;">계약 유형 </li> 
+	
+	<li style="margin-right: 20px; margin-left: 7.5px; margin-top: 5px;">계약 유형 
+		<div class="form-group row" > 
 			<div class="icheck-primary d-inline">
 				<input type="radio" id="contract_type11" name="contract_type" value="매매" checked>
 				<label for="contract_type11">
@@ -100,179 +107,222 @@ function jusoCallBack(roadFullAddr,roadAddrPart1,addrDetail,roadAddrPart2,engAdd
 				월세
 				</label>
 			</div>
-	</div>
+		</div>
+	</li>
 	                    	
 	<!-- 금액 정보 -->
 	<div>
-		<li style="margin-right: 20px; margin-top: 5px;">금액 정보</li>
+		<li style="margin-right: 20px; margin-top: 5px;">금액 정보
 			<div class="form-group row">
-				<!-- 매매가 -->
-				<div class="input-group col-md-3">
-					<span style="margin-right: 10px; margin-top: 10px;">매매가</span>
-					<input type="text" class="form-control" name="budget1" id="budget1" style="width: 150px; margin-top: 5px;" >
-					<div class="input-group-append">
-					<span class="input-group-text" style="margin-right: 30px; margin-top: 5px;">만원</span>
+				<section>
+					<!-- 매매가 -->
+					<div class="input-group mb-1">
+						<span style="margin-right: 10px; margin-top: 10px;">매매가</span>
+						<input type="text" class="form-control" name="budget1" id="budget1" style="width: 80px; margin-top: 5px;" >
+						<div class="input-group-append">
+						<span class="input-group-text" style="margin-right: 10px; margin-top: 5px;">만원</span>
+						</div>
 					</div>
-				</div>
-										
-				<!-- 현재 임차인 보증금 -->
-				<div class="input-group col-md-3">
-					<span style="margin-right: 10px; margin-top: 10px;">현보증금</span>
-					<input type="text" class="form-control" name="budget2" id="budget2" style="width: 150px; margin-top: 5px;" >
-					<div class="input-group-append">
-					<span class="input-group-text" style="margin-right: 30px; margin-top: 5px;">만원</span>
+				</section>
+				
+				<section>						
+					<!-- 현재 임차인 보증금 -->
+					<div class="input-group mb-1">
+						<span style="margin-right: 10px; margin-top: 10px;">보증금</span>
+						<input type="text" class="form-control" name="budget2" id="budget2" style="width: 80px; margin-top: 5px;" >
+						<div class="input-group-append">
+						<span class="input-group-text" style="margin-right: 10px; margin-top: 5px;">만원</span>
+						</div>
 					</div>
-				</div>
-										
-				<!-- 현재 임차인 월세 -->
-				<div class="input-group col-md-3">
-					<span style="margin-right: 10px; margin-top: 10px;">현월세</span>
-					<input type="text" class="form-control" name="budget3" id="budget3" style="width: 150px; margin-top: 5px;" >
-					<div class="input-group-append">
-					<span class="input-group-text" style="margin-right: 30px; margin-top: 5px;">만원</span>
+				</section>
+									
+				<section>
+					<!-- 현재 임차인 월세 -->
+					<div class="input-group mb-1">
+						<span style="margin-right: 10px; margin-top: 10px;">현월세</span>
+						<input type="text" class="form-control" name="budget3" id="budget3" style="width: 80px; margin-top: 5px;" >
+						<div class="input-group-append">
+						<span class="input-group-text" style="margin-right: 10px; margin-top: 5px;">만원</span>
+						</div>
 					</div>
-				</div>
-										
-				<!-- 집에 저당잡힌 은행 융자금 -->
-				<div class="input-group col-md-3">
-					<span style="margin-right: 10px; margin-top: 10px;">융자금</span>
-					<input type="text" class="form-control" name="loan" id="loan" style="width: 150px; margin-top: 5px;" >
-					<div class="input-group-append">
-					<span class="input-group-text" style="margin-right: 30px; margin-top: 5px;">만원</span>
+				</section>
+				
+				<section>						
+					<!-- 집에 저당잡힌 은행 융자금 -->
+					<div class="input-group mb-1">
+						<span style="margin-right: 10px; margin-top: 10px;">융자금</span>
+						<input type="text" class="form-control" name="loan" id="loan" style="width: 80px; margin-top: 5px;" >
+						<div class="input-group-append">
+						<span class="input-group-text" style="margin-right: 10px; margin-top: 5px;">만원</span>
+						</div>
 					</div>
-				</div>
+				</section>
 			</div>	
+		</li>
 	</div>
 	              			
 	<!-- 면적 정보 -->
-		<div>
-			<li style="margin-right: 20px; margin-top: 5px;">면적 정보
+	
+	<li style="margin-right: 20px; margin-top: 5px;">면적 정보
+		<div class="form-group row">
+			<section>
 				<div class="input-group mb-3">
 					<!-- 공용부분 포함한 면적 -->
-					<span style="margin-right: 10px; margin-top: 10px;">공급면적</span> <input
-						type="text" name="area1" id="area1" class="form-control"
-						style="width: 200px; margin-top: 5px;">
+					<span style="margin-right: 10px; margin-top: 10px;">공급면적</span> 
+					<input type="text" name="area1" id="area1" class="form-control" style="width: 100px; margin-top: 5px;">
 					<div class="input-group-append">
-						<span class="input-group-text"
-							style="margin-right: 30px; margin-top: 5px;">m²</span>
+						<span class="input-group-text" style="margin-right: 10px; margin-top: 5px;">m²</span>
 					</div>
-
+				</div>
+			</section>
+			
+			<section>
+				<div class="input-group mb-3">
 					<!-- 실제 집 면적 -->
-					<span style="margin-right: 10px; margin-top: 10px;">전용면적</span> <input
-						type="text" name="area2" id="area2" class="form-control"
-						style="width: 200px; margin-top: 5px;">
+					<span style="margin-right: 10px; margin-top: 10px;">전용면적</span> 
+					<input type="text" name="area2" id="area2" class="form-control" style="width: 100px; margin-top: 5px;">
 					<div class="input-group-append">
-						<span class="input-group-text"
-							style="margin-right: 30px; margin-top: 5px;">m²</span>
+					<span class="input-group-text" style="margin-right: 10px; margin-top: 5px;">m²</span>
 					</div>
-
+				</div>
+			</section>
+		
+			<section>
+				<div class="input-group mb-3">
 					<!-- 건물 대지에서 내 집이 차지하는 면적 -->
-					<span style="margin-right: 10px; margin-top: 10px;">대지면적</span> <input
-						type="text" name="area3" id="area3" class="form-control"
-						style="width: 200px; margin-top: 5px;">
+					<span style="margin-right: 10px; margin-top: 10px;">대지면적</span> 
+					<input type="text" name="area3" id="area3" class="form-control" style="width: 100px; margin-top: 5px;">
 					<div class="input-group-append">
-						<span class="input-group-text"
-							style="margin-right: 30px; margin-top: 5px;">m²</span>
+						<span class="input-group-text" style="margin-right: 10px; margin-top: 5px;">m²</span>
 					</div>
-
 				</div>
-			</li>
+			</section>
 		</div>
+	</li>
+	<li style="margin-right: 20px; margin-top: 5px;">입주 정보
 		<div class="form-group row">
-
-			<div class="input-group col-md-6">
-				<!-- 입주 가능 날짜 -->
-				<li style="margin-top: 10px;"></li> 
-				<span style="margin-right: 10px; margin-top: 10px;">입주 가능 날짜</span> 
-				<input type="text" name="moveSchedule" id="moveSchedule" readonly="readonly" />
-			</div>
-			<div class="input-group col-md-6">
-				<!-- 임대 만기 날짜 -->
-				<span style="margin-right: 10px; margin-top: 10px;">임대 만기 날짜</span>
-				<input type="text" name="" end_of_lease"" id="end_of_lease"
-					readonly="readonly" />
-			</div>
-
+			<section>
+				<div class="input-group col-md-12">
+					<!-- 입주 가능 날짜 -->
+					<span style="margin-right: 10px; margin-top: 10px;">입주 가능 날짜</span> 
+					<input type="text" name="moveSchedule" id="moveSchedule" readonly="readonly" />
+				</div>
+			</section>
+			<section>
+				<div class="input-group col-md-12">
+					<!-- 임대 만기 날짜 -->
+					<span style="margin-right: 10px; margin-top: 10px;">임대 만기 날짜</span>
+					<input type="text" name="end_of_lease" id="end_of_lease" readonly="readonly" />
+				</div>
+			</section>
 		</div>
+	</li>
 
-		<li>상세 정보 : 
-			<!-- select -->
-			<div class="input-group mb-4">
-				<!-- 방 개수 -->
-				<span style="margin-right: 10px; margin-top: 10px;">방 개수</span> 
-				<select class="form-control" id="room" name="room" style="width: 200px; margin-right: 30px; margin-top: 5px;">
-					<option value="none">선택</option>
-					<option>1개</option>
-					<option>2개</option>
-					<option>3개</option>
-					<option>4개</option>
-					<option>5개</option>
-					<option>6개 이상</option>
-				</select>
+	<li style="margin-right: 20px; margin-top: 5px;">상세 정보
+		<div class="form-group row">
+			<section>
+				<div class="input-group mb-1">
+					<!-- 방 개수 -->
+					<span style="margin-right: 10px; margin-top: 10px;">방개수</span> 
+					<select class="form-control" id="room" name="room" style="width: 100px; margin-right: 30px; margin-top: 5px;">
+						<option value="none">선택</option>
+						<option>1개</option>
+						<option>2개</option>
+						<option>3개</option>
+						<option>4개</option>
+						<option>5개</option>
+						<option>6개 이상</option>
+					</select>
+				</div>
+			</section>
 
-				<!-- 욕실수 -->
-				<span style="margin-right: 10px; margin-top: 10px;">욕실수</span> 
-				<select class="form-control" id="bathroom" name="bathroom" style="width: 100px; margin-right: 30px; margin-top: 5px;">
-					<option value="none">선택</option>
-					<option>1개</option>
-					<option>2개</option>
-					<option>3개 이상</option>
-				</select>
+			<section>
+				<div class="input-group mb-1">
+					<!-- 향 -->
+					<span style="margin-right: 10px; margin-top: 10px;">향</span> 
+					<select class="form-control" style="width: 100px; margin-right: 30px; margin-top: 5px;">
+						<option value="none">선택</option>
+						<option>북향</option>
+						<option>남향</option>
+						<option>동향</option>
+						<option>서향</option>
+						<option>북동향</option>
+						<option>북서향</option>
+						<option>남동향</option>
+						<option>남서향</option>
+						<option>모름</option>
+					</select>
+				</div>
+			</section>
+			
+			<section>
+				<div class="input-group mb-1">
+					<!-- 욕실수 -->
+					<span style="margin-right: 10px; margin-top: 10px;">욕실수</span> 
+					<select class="form-control" id="bathroom" name="bathroom" style="width: 100px; margin-right: 30px; margin-top: 5px;">
+						<option value="none">선택</option>
+						<option>1개</option>
+						<option>2개</option>
+						<option>3개 이상</option>
+					</select>
+				</div>
+			</section>
 
-				<!-- 향 -->
-				<span style="margin-right: 10px; margin-top: 10px;">향</span> 
-				<select class="form-control" style="width: 100px; margin-right: 30px; margin-top: 5px;">
-					<option value="none">선택</option>
-					<option>북향</option>
-					<option>남향</option>
-					<option>동향</option>
-					<option>서향</option>
-					<option>북동향</option>
-					<option>북서향</option>
-					<option>남동향</option>
-					<option>남서향</option>
-					<option>모름</option>
-				</select>
+			<section>
+				<div class="input-group mb-1">
+					<!-- 난방방식 -->
+					<span style="margin-right: 10px; margin-top: 10px;">난방방식</span> 
+					<select class="form-control" style="width: 100px; margin-right: 10px; margin-top: 5px;">
+						<option value="none">선택</option>
+						<option>도시가스</option>
+						<option>LPG</option>
+						<option>전기</option>
+						<option>기타</option>
+					</select>
+				</div>
+			</section>
+		</div>
+			
+		<div class="form-group row">
+			<section>
+				<div class="input-group mb-2">
+					<!-- 세대수 -->
+					<span style="margin-right: 10px; margin-top: 10px;">세대수</span> 
+					<input type="text" name="area1" id="area1" class="form-control" style="width: 100px; margin-top: 5px;">
+					<div class="input-group-append">
+						<span class="input-group-text" style="margin-right: 10px; margin-top: 5px;">세대</span>
+					</div>
+				</div>
+			</section>
+			
+			<section>
+				<div class="input-group mb-2">
+					<!-- 건축년도 -->
+					<span style="margin-right: 10px; margin-top: 10px;">건축년도</span> 
+					<input type="text" name="area1" id="area1" class="form-control" style="width: 100px; margin-top: 5px;">
+					<div class="input-group-append">
+						<span class="input-group-text" style="margin-right: 10px; margin-top: 5px;">년</span>
+					</div>
+				</div>
+			</section>
 
-				<!-- 난방방식 -->
-				<span style="margin-right: 10px; margin-top: 10px;">난방방식</span> 
-				<select class="form-control" style="width: 100px; margin-right: 30px; margin-top: 5px;">
-					<option value="none">선택</option>
-					<option>도시가스</option>
-					<option>LPG</option>
-					<option>전기</option>
-					<option>기타</option>
-				</select>
-
+			<section>
+				<div class="input-group mb-2">
+					<!-- 층수 / 총층수-->
+					<span style="margin-right: 10px; margin-top: 10px;">층수 / 총 층수</span>
+					<input type="text" name="area1" id="area1" class="form-control" style="width: 50px; margin-top: 5px;">
+					<div class="input-group-append">
+						<span class="input-group-text" style="margin-right: 10px; margin-top: 5px;">층</span>
+					</div>
+					<span style="margin-top: 10px; font-size: 140%;">/</span> 
+					<input type="text" name="area1" id="area1" class="form-control" style="width: 50px; margin-top: 5px; margin-left: 10px;">
+					<div class="input-group-append">
+						<span class="input-group-text" style="margin-right: 10px; margin-top: 5px;">층</span>
+					</div>
+				</div>
+			</section>
 			</div>
-
-			<div class="input-group mb-4">
-				<!-- 세대수 -->
-				<span style="margin-right: 10px; margin-top: 10px;">세대수</span> 
-				<input type="text" name="area1" id="area1" class="form-control" style="width: 100px; margin-top: 5px;">
-				<div class="input-group-append">
-					<span class="input-group-text" style="margin-right: 30px; margin-top: 5px;">세대</span>
-				</div>
-
-				<!-- 건축년도 -->
-				<span style="margin-right: 10px; margin-top: 10px;">건축년도</span> 
-				<input type="text" name="area1" id="area1" class="form-control" style="width: 100px; margin-top: 5px;">
-				<div class="input-group-append">
-					<span class="input-group-text" style="margin-right: 30px; margin-top: 5px;">년</span>
-				</div>
-
-				<!-- 층수 / 총층수-->
-				<span style="margin-right: 10px; margin-top: 10px;">층수 / 총 층수</span>
-				<input type="text" name="area1" id="area1" class="form-control" style="width: 50px; margin-top: 5px;">
-				<div class="input-group-append">
-					<span class="input-group-text" style="margin-right: 10px; margin-top: 5px;">층</span>
-				</div>
-				<span style="margin-top: 10px; font-size: 140%;">/</span> 
-				<input type="text" name="area1" id="area1" class="form-control" style="width: 50px; margin-top: 5px; margin-left: 10px;">
-				<div class="input-group-append">
-					<span class="input-group-text" style="margin-right: 30px; margin-top: 5px;">층</span>
-				</div>
-			</div> <!--checkbox -->
+			
 			<div class="input-group mb-3">
 				<div class="icheck-primary d-inline" style="margin-right: 20px;">
 					<input type="checkbox" id="aircondition" name="aircondition" value="냉방시설"> 
@@ -335,7 +385,7 @@ function jusoCallBack(roadFullAddr,roadAddrPart1,addrDetail,roadAddrPart2,engAdd
 	                    </div>
 	                    <div class="form-group col-md-3">
 	                      <div class="icheck-primary d-inline" style="margin-right: 20px;">
-	                    	<input type="checkbox" id="CCTV	" value="방범카메라" name="CCTV	" >
+	                    	<input type="checkbox" id="CCTV" value="방범카메라" name="CCTV" >
 	                    	<label for="CCTV">
 	                    	방범카메라
 	                    	</label>
@@ -351,7 +401,7 @@ function jusoCallBack(roadFullAddr,roadAddrPart1,addrDetail,roadAddrPart2,engAdd
 	                    </div>
 	                    <div class="form-group col-md-3">
 	                      <div class="icheck-primary d-inline" style="margin-right: 20px;">
-	                    	<input type="checkbox" id="WINDOW_GUARD	" value="방범창" name="WINDOW_GUARD	" >
+	                    	<input type="checkbox" id="WINDOW_GUARD" value="방범창" name="WINDOW_GUARD" >
 	                    	<label for="WINDOW_GUARD">
 	                    	방범창
 	                    	</label>
