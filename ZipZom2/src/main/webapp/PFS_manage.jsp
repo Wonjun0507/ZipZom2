@@ -11,6 +11,8 @@
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="./resources/plugins/fontawesome-free/css/all.min.css">
+  <!-- jQuery UI -->
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   <!-- Ionicons -->
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   <!-- overlayScrollbars -->
@@ -151,26 +153,26 @@
 			<div class="form-group clearfix">
 				<span style="margin-right: 30px; ">계약 유형</span>
                       <div class="icheck-primary d-inline" style="margin-right: 20px; ">
-                        <input type="checkbox" id="checkboxPrimary1" name="r1" checked>
-                        <label for="checkboxPrimary1">
+                        <input type="checkbox" id="check_all" name="check_all" value="1" checked>
+                        <label for="check_all">
                         <span>전체</span>
                         </label>
                       </div>
                       <div class="icheck-primary d-inline" style="margin-right: 20px; ">
-                        <input type="checkbox" id="checkboxPrimary2" name="r2">
-                        <label for="checkboxPrimary2">
+                        <input type="checkbox" id="checkbox1" name="r1">
+                        <label for="checkbox1">
 						<span>매매</span>
                         </label>
                       </div>
                       <div class="icheck-primary d-inline" style="margin-right: 20px; ">
-                        <input type="checkbox" id="checkboxPrimary3" name="r3">
-                        <label for="checkboxPrimary3">
+                        <input type="checkbox" id="checkbox2" name="r2">
+                        <label for="checkbox2">
                         <span>전세</span>
                         </label>
                       </div>
                       <div class="icheck-primary d-inline" style="margin-right: 20px; ">
-                        <input type="checkbox" id="checkboxPrimary4" name="r4" >
-                        <label for="checkboxPrimary4">
+                        <input type="checkbox" id="checkbox3" name="r3" >
+                        <label for="checkbox3">
                         <span>월세</span>
                         </label>
                       </div>
@@ -359,6 +361,8 @@
 <jsp:include page="./pfs_register_dialog.jsp"></jsp:include>
 <!-- jQuery -->
 <script src="./resources/plugins/jquery/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <!-- Bootstrap 4 -->
 <script src="./resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- Select2 -->

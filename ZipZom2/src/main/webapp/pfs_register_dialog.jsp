@@ -82,16 +82,13 @@
 							
 							<!-- 오피스텔 탭 시작 -->
 							<jsp:include page = "./pfs_register_dialog_officetel.jsp" flush = "false"/>
-							
+						
 							<!-- 다세대 탭 시작 -->
 							<jsp:include page = "./pfs_register_dialog_dasede.jsp" flush = "false"/>
-							
+						
 							<!-- 다가구 탭 시작 -->
 							<jsp:include page = "./pfs_register_dialog_dagagu.jsp" flush = "false"/>  
-
-							<!-- /.modal-content --> 
-
-	                	</div>
+						</div>
 					</div>
 				</div>
 
