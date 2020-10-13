@@ -178,16 +178,35 @@
                       </div>
 			</div>
 			
-			<div class="input-group mb-3">
-			<span style="margin-right: 10px; margin-top: 10px;">매매가</span>
-			<input type="text" class="form-control" style="width: 200px; margin-top: 5px;" >
-			<span class="input-group-text" style="margin-right: 30px; margin-top: 5px;" ">만원</span>
-			<span style="margin-right: 10px; margin-top: 10px;">건축년도</span>
-			<input type="text" class="form-control" style="width: 200px; margin-top: 5px;" >
-			<span class="input-group-text" style="margin-right: 30px; margin-top: 5px;" ">년</span>
-			<span style="margin-right: 10px; margin-top: 10px;">전용면적</span>
-			<input type="text" class="form-control" style="width: 200px; margin-top: 5px;" >
-			<span class="input-group-text" style="margin-right: 30px; margin-top: 5px;" ">m²</span>
+			<div class="form-group row">
+				<section>
+					<div class="input-group mb-3">
+					<span style="margin-right: 10px; margin-top: 10px;">매매가</span>
+					<input type="text" class="form-control" style="width: 100px; margin-top: 5px;" >
+					<span class="input-group-text" style="margin-right: 10px; margin-top: 5px;" ">만원</span>
+					<span style="margin-top: 10px;">~</span>
+					<input type="text" class="form-control" style="width: 100px; margin-left: 10px; margin-top: 5px;" >
+					<span class="input-group-text" style="margin-right: 30px; margin-top: 5px;" ">만원</span>
+				</section>
+
+				<section>
+					<div class="input-group mb-3">
+					<span style="margin-right: 10px; margin-top: 10px;">건축년도</span>
+					<input type="text" class="form-control" style="width: 100px; margin-top: 5px;" >
+					<span class="input-group-text" style="margin-right: 30px; margin-top: 5px;" ">년</span>
+					</div>
+				</section>
+
+				<section>
+					<div class="input-group mb-3">
+					<span style="margin-right: 10px; margin-top: 10px;">전용면적</span>
+					<input type="text" class="form-control" style="width: 100px; margin-top: 5px;" >
+					<span class="input-group-text" style="margin-right: 30px; margin-top: 5px;" ">m²</span>
+					<span style="margin-top: 10px;">~</span>
+					<input type="text" class="form-control" style="width: 100px; margin-left: 10px; margin-top: 5px;" >
+					<span class="input-group-text" style="margin-right: 30px; margin-top: 5px;" ">m²</span>
+					</div>
+				</section>
             </div>       
         </div>
     
