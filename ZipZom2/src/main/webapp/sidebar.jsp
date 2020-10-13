@@ -109,13 +109,13 @@
             	</a>
 				<ul class="nav nav-treeview">
 					<li class="nav-item">
-						<a href="./PFS_manage.jsp" class="nav-link">
+						<a href="./pfs_manage.jsp" class="nav-link">
 						<i class="far fa-circle nav-icon"></i>
 						<p>등록 매물 관리</p>
 						</a>
 					</li>
 					<li class="nav-item">
-                		<a href="../UI/buttons.html" class="nav-link">
+                		<a href="./pfs_compare.jsp" class="nav-link">
             	      	<i class="far fa-circle nav-icon"></i>
 						<p>매물 비교</p>
              	   		</a>

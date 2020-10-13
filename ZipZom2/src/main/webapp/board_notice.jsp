@@ -102,11 +102,55 @@
 		<div class="card">
       		<!-- 카드 제목 -->
         	<div class="card-header">
-				<h3 class="card-title">제작 중</h3> 
+				<div class="container">
+					<table class="table table-hover">
+						<thead>
+						<tr>
+							<th>번호</th>
+							<th>제목</th>
+							<th>작성자</th>
+							<th>등록일</th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr>
+							<td>1</td>
+							<td>첫번째 공지사항</td>
+							<td>관리자</td>
+							<td>2020-10-13</td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>두번째 공지사항</td>
+							<td>관리자</td>
+							<td>2020-10-13</td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td>세번째 공지사항</td>
+							<td>관리자</td>
+							<td>2020-10-13</td>
+						</tr>
+						</tbody>
+					</table>
+					
+					<hr/>
+					<div class="row">
+						<div class="col">
+							<ul class="pagination" style="float:right;">
+								<li class="page-item"><a class="page-link" href="#">Previous</a></li>
+								<li class="page-item"><a class="page-link" href="#">1</a></li>
+								<li class="page-item"><a class="page-link" href="#">2</a></li>
+								<li class="page-item"><a class="page-link" href="#">3</a></li>
+								<li class="page-item"><a class="page-link" href="#">4</a></li>
+								<li class="page-item"><a class="page-link" href="#">5</a></li>
+								<li class="page-item"><a class="page-link" href="#">next</a></li>
+							</ul>
+						</div>
+					</div>
+				</div> 
 			</div>
 			<!-- 본문 내용 -->
-			<div>
-			</div>
 		</div>
 	</section>
     
