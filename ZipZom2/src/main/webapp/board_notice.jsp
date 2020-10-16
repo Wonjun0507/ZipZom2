@@ -170,7 +170,7 @@
 <!-- ./wrapper -->
 
 <!-- 다이얼로그창 인클루드 -->
-<jsp:include page="./Customer_resister_dialog.jsp"></jsp:include>
+<jsp:include page="./customer_resister_dialog.jsp"></jsp:include>
 <!-- jQuery -->
 <script src="./resources/plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->

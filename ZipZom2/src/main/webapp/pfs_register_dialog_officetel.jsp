@@ -5,6 +5,33 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<!-- <link rel="stylesheet" href="/resources/demos/style.css"> -->
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<!-- 도로명주소 api -->
+<script language="javascript">
+// opener관련 오류가 발생하는 경우 아래 주석을 해지하고, 사용자의 도메인정보를 입력합니다. ("팝업API 호출 소스"도 동일하게 적용시켜야 합니다.)
+//document.domain = "abc.go.kr";
+
+function goPopup(){
+	// 호출된 페이지(jusopopup.jsp)에서 실제 주소검색URL(http://www.juso.go.kr/addrlink/addrLinkUrl.do)를 호출하게 됩니다.
+    var pop = window.open("./jusoPopup.jsp","pop","width=570,height=420, scrollbars=yes, resizable=yes"); 
+    
+	// 모바일 웹인 경우, 호출된 페이지(jusopopup.jsp)에서 실제 주소검색URL(http://www.juso.go.kr/addrlink/addrMobileLinkUrl.do)를 호출하게 됩니다.
+    //var pop = window.open("/popup/jusoPopup.jsp","pop","scrollbars=yes, resizable=yes"); 
+}
+/** API 서비스 제공항목 확대 (2017.02) **/
+function jusoCallBack(roadFullAddr,roadAddrPart1,addrDetail,roadAddrPart2,engAddr, jibunAddr, zipNo, admCd, rnMgtSn, bdMgtSn
+						, detBdNmList, bdNm, bdKdcd, siNm, sggNm, emdNm, liNm, rn, udrtYn, buldMnnm, buldSlno, mtYn, lnbrMnnm, lnbrSlno, emdNo){
+	// 팝업페이지에서 주소입력한 정보를 받아서, 현 페이지에 정보를 등록합니다.
+	document.form.roadAddrPart1.value = roadAddrPart1;
+	document.form.roadAddrPart2.value = roadAddrPart2;
+	document.form.addrDetail.value = addrDetail;
+	document.form.zipNo.value = zipNo;
+}
+</script>
+<!-- 도로명주소 api 끝-->
 
 
 </head>
@@ -14,19 +41,48 @@
 
 <div class="tab-pane fade" id="custom-tabs-four-officetel" role="tabpanel" aria-labelledby="custom-tabs-four-officetel-tab">
 <!-- 매물 주소 api 활용-->
+	<!-- 매물 주소 api 활용-->
 	<div>
 		<li style="margin-right: 10px; margin-top: 10px;"> 매물 주소(오피스텔) </li>
-			<div class="form-group row" >
-				<input type="text" class="form-control" name="address" style="width: 200px; margin-right: 20px; margin-left: 20px; margin-top: 10px;" readonly="readonly" >
-				<button type="button" class="btn btn-block btn-primary" style="width: 100px; margin-right: 10px;" margin-top: 10px;">
-				주소 검색
-				</button>
-			</div>
 			
-			<div class="form-group row" >
-				<input type="text" class="form-control" name="address1" value="" style="width: 400px; margin-right: 20px; margin-left: 20px;" readonly="readonly" >
-				<input type="text" class="form-control" name="address2" value="" style="width: 400px; margin-right: 20px;" placeholder="나머지 주소를 입력하세요">
-			</div>
+	
+			<form name="form" id="form" method="post" style="margin-right: 10px; margin-top: 10px; margin-bottom: 10px;">
+	<table >
+			<colgroup>
+				<col style="width:25%"><col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th>우편번호</th>
+					<td>
+						<div class="form-group row">
+					    <input type="hidden" id="confmKey" name="confmKey" value=""  >
+						<input class="form-control" type="text" id="zipNo" name="zipNo" readonly style="width:100px; margin-right: 10px;">
+						<input class="form-control" type="button"  value="주소검색" style="width:100px" onclick="goPopup();">
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th>도로명주소</th>
+					<td>
+						<div class="form-group row">
+						<input class="form-control" type="text" id="roadAddrPart1" style="width:300px; " readonly>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th>상세주소</th>
+					<td>
+						<div class="form-group row">
+						<input class="form-control" type="text" id="addrDetail" style="width:40%; margin-right: 10px;" value="">
+						<input class="form-control" type="text" id="roadAddrPart2"  style="width:40% " value="" readonly>
+						</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+</form>	
+
 	</div>
 							
 	<!-- 계약 유형 -->

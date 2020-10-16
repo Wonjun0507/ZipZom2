@@ -16,7 +16,7 @@
 <div class="modal fade" id="modal-xl">
 	<div class="modal-dialog modal-xl">
 		<!-- 모달 시작 -->
-		<div class="modal-content">
+		<div class="modal-content" >
 			<!-- modal 헤더 -->
 			<div class="modal-header">
 				<h4 class="modal-title">고객 신규 등록</h4>
@@ -27,6 +27,7 @@
 			</div>
 			<!-- modal 바디 -->
 			<!-- 폰트 테스트로 넣어봤음 / 나중에 바꿀 거나 css로 옮길것 -->
+			<form id="cfrm" method="post">
 			<div class="modal-body" style="font-family: 'Helvetica', sans-serif; color: #0553DD; font-weight: bold;">
 				<ul>
 					<li>
@@ -84,7 +85,7 @@
 								<div class="input-group mb-3">
 									<!-- 건축 년도 -->
 									<span style="margin-right: 10px; margin-top: 10px;">건축 년도</span>
-									<input type="text" class="form-control" id="b_year" name="b_year" style="width: 200px; margin-right: 30px; margin-top: 5px;" >
+									<input type="text" class="form-control" id="b_year" name="bYear" style="width: 200px; margin-right: 30px; margin-top: 5px;" >
 							
 								</div>
 							</section>
@@ -96,10 +97,15 @@
 	              		<div class="form-group row">
 	              			
 	              			<section>
-		              			<div class="input-group mb-4">
-		              			<!-- 계약 타입 -->
-		              			<span style="margin-right: 10px; margin-top: 10px;">계약 타입</span>
-								<input type="text" class="form-control" id="contract_type" name="contractType" style="width: 200px; margin-right: 30px; margin-top: 5px;" >
+								<div class="input-group mb-3">
+									<!-- 고객 속성 -->
+									<span style="margin-right: 10px; margin-top: 10px;">계약 타입</span>
+									<select class="form-control select2bs4" id="contractType" name="contractType" style="width: 200px; margin-right: 30px; margin-top: 5px;">
+				                    	<option value="none">선택</option>
+											<option>매매</option>
+											<option>전세</option>
+											<option>월세</option>
+									</select>
 								</div>
 							</section>
 							
@@ -183,7 +189,7 @@
 			              		<div class="input-group mb-3">
 								<!-- 방 개수 -->
 								<span style="margin-right: 10px; margin-top: 10px;">방 개수</span>
-								<select class="form-control select2bs4" id="room" name="room" style="width: 100px; margin-right: 30px; margin-top: 5px;">
+								<select class="form-control select2bs4" id="room" name="rooms" style="width: 100px; margin-right: 30px; margin-top: 5px;">
 			                    	<option value="none">선택</option>
 										<option>1개</option>
 										<option>2개</option>
@@ -219,7 +225,7 @@
 			              		<div class="input-group mb-3">
 			              		<!-- 승강기 -->
 								<span style="margin-right: 10px; margin-top: 10px;">승강기</span>
-								<select class="form-control select2bs4" id="elevator" name="elevator" style="width: 100px; margin-right: 30px; margin-top: 5px;">
+								<select class="form-control select2bs4" id="elevator" name="elevators" style="width: 100px; margin-right: 30px; margin-top: 5px;">
 			                    	<option value="none">선택</option>
 										<option>있음</option>
 										<option>없음</option>
@@ -390,25 +396,28 @@
 					<!-- 닫기 / 등록 버튼 -->	              
 					<div class="modal-footer justify-content-between">
 						<button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
-						<button type="button" class="btn btn-primary">등록</button>
+						<button type="button" id="customerWrite" class="btn btn-primary" data-dismiss="modal">등록</button>
 					</div>              
 	            </div>
-       			
+       			</form>
 	      </div>
     </section>
 
   </div>
 
 </div>
+
+
+
+    
 <script type="text/javascript">
 $('#moveSchedule').datepicker();
 $('#visitDate').datepicker();
 $('#moveSchedule').datepicker('option', 'dateFormat', 'yy-mm-dd');
 $('#visitDate').datepicker('option', 'dateFormat', 'yy-mm-dd');
-$('#customerWrite').on('click', function(){
-	document.cfrm.submit();
-})
 </script>
+
+
 
 </body>
 </html>
