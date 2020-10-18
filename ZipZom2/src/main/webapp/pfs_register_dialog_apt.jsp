@@ -34,7 +34,7 @@ function jusoCallBack(roadFullAddr,roadAddrPart1,addrDetail,roadAddrPart2,engAdd
 <!-- 도로명주소 api 끝-->
 
 </head>
-<body>
+<body class="hold-transition sidebar-mini">
 
 <!-- dialog 아파트 -->
 
